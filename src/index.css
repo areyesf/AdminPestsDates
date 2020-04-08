@@ -1,13 +1,174 @@
-body {
+/* ************************** */
+/* IMPORT FONT */
+/* ************************** */
+@import url("https://fonts.googleapis.com/css?family=Roboto:100,400&display=swap");
+
+/* ************************** */
+/* RESET STYLES */
+/* ************************** */
+* {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+  box-sizing: border-box;
+}
+/* ************************** */
+/* COLOR PALETTE */
+/* ************************** */
+:root {
+  --var-color-bgbody: #3a54b4;
+  --var-color-fontW: #fff;
+  --var-color-required: #ff4040;
+  --var-color-btn-sucess: #82cdb1;
+  --var-color-btn-sucess-hover: #75ab97;
+}
+/* ************************** */
+/* GENERAL STYLES */
+/* ************************** */
+/* html{
+    font-size: 62.5%;
+} */
+body {
+  font-family: "Roboto", sans-serif;
+  background: var(--var-color-bgbody);
+  color: var(--var-color-fontW);
+  background-image: url(/img/dog.png);
+  background-repeat: no-repeat;
+  background-position: bottom left;
+  min-height: 100vh;
+}
+.container {
+  display: flex;
+  max-width: 900px;
+  margin: 1rem auto;
+}
+section {
+  width: 50%;
+}
+section h2 {
+  font-size: 2.25rem;
+  font-weight: 100;
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+form {
+  width: 100%;
+}
+input,
+textarea {
+  border: solid 1px var(--var-color-fontW);
+  border-width: 0 0 1px 0;
+  background-color: transparent;
+  padding: 0.5rem;
+  font-size: 1rem;
+  color: var(--var-color-fontW);
+  width: 100%;
+  transition: box-shadow ease-in 0.1s;
+  margin: 1.5rem 0;
+  cursor: pointer;
+}
+input:hover,
+textarea:hover {
+  box-shadow: inset 0 -2px 0 0 var(--var-color-fontW);
+}
+textarea {
+  resize: vertical;
+}
+@media(max-width:800px){
+  .container{
+    max-width: 700px;
+    flex-direction: column;
+    align-items: center;
+  }
+  section{
+    width:100%;
+    margin: 1rem 0;
+  }
+  .card{
+    background-color: var(--var-color-bgbody);
+    opacity: 0.9;
+  }
+}
+@media(max-width: 500px){
+  .container{
+    max-width: 350px;
+    
+  }
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+/* ************************** */
+/* HEADER */
+/* ************************** */
+header h1 {
+  padding: 1.5rem;
+  text-align: center;
+  font-size: 3rem;
+}
+
+/* ************************** */
+/* FORM */
+/* ************************** */
+.btn-sucess {
+  display: block;
+  text-align: center;
+  margin: 0 auto;
+  width: 100%;
+  padding: 0.7rem;
+  color: var(--var-color-fontW);
+  font-weight: bold;
+  font-size: 1.3rem;
+  background-color: var(--var-color-btn-sucess);
+  border: none;
+  cursor: pointer;
+  transition: background-color ease-in 0.1s;
+}
+.btn-sucess:hover {
+  background-color: var(--var-color-btn-sucess-hover);
+}
+
+/* ************************** */
+/* CREATED DATES */
+/* ************************** */
+.created-dates {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin-left: 0.5rem;
+}
+.card {
+  display: flex;
+  flex-direction: column;
+  padding: 0.5rem;
+  border: solid 1px var(--var-color-fontW);
+  border-radius: 10px;
+  width: 90%;
+  margin: 1rem auto 0 auto;
+  font-weight: 100;
+  line-height: 2rem;
+  font-size: 1rem;
+  box-shadow: 3px 3px 0 0 var(--var-color-fontW);
+  transition: box-shadow ease-in 0.1s;
+}
+.card:hover {
+  box-shadow: 10px 3px 0 0 var(--var-color-fontW);
+}
+.card span {
+  font-weight: bold;
+}
+.btn-danger {
+  display: block;
+  text-align: center;
+  margin: 0.5rem auto;
+  width: 50%;
+  padding: 0.7rem;
+  color: var(--var-color-fontW);
+  font-weight: bold;
+  font-size: 1rem;
+  background-color: transparent;
+  border: solid 1px var(--var-color-fontW);
+  cursor: pointer;
+  transition: box-shadow ease 0.1;
+}
+.btn-danger:hover {
+  box-shadow: inset 0 0 0 3px var(--var-color-fontW);
 }
